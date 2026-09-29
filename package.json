@@ -1,0 +1,17 @@
+{
+  "name": "tapestry-viewer-block",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WordPress Gutenberg block that embeds an Internet Archive Tapestry export (.zip) using the prebuilt @asteasolutions/tapestry-viewer package.",
+  "license": "MIT",
+  "scripts": {
+    "build": "wp-scripts build && npm run copy-viewer",
+    "start": "wp-scripts start",
+    "copy-viewer": "node scripts/copy-viewer.mjs",
+    "plugin-zip": "npm run build && node scripts/make-plugin-zip.mjs"
+  },
+  "devDependencies": {
+    "@asteasolutions/tapestry-viewer": "^0.1.1",
+    "@wordpress/scripts": "^36.0.0"
+  }
+}

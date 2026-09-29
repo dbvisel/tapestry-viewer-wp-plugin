@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "tapestry-viewer/viewer",
+  "title": "Tapestry Viewer",
+  "category": "embed",
+  "icon": "media-archive",
+  "description": "Embed an Internet Archive Tapestry export (.zip) using the prebuilt Tapestry Viewer.",
+  "keywords": ["tapestry", "internet archive", "viewer"],
+  "textdomain": "tapestry-viewer-block",
+  "attributes": {
+    "mediaId": {
+      "type": "number"
+    },
+    "mediaUrl": {
+      "type": "string"
+    },
+    "mediaFilename": {
+      "type": "string"
+    },
+    "height": {
+      "type": "number",
+      "default": 600
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "render": "file:./render.php"
+}
